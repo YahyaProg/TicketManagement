@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# IDE0058: Expression value is never used
+csharp_style_unused_value_expression_statement_preference = unused_local_variable
+
+# S1133: Deprecated code should be removed
+dotnet_diagnostic.S1133.severity = none
+
+# S1123: "Obsolete" attributes should include explanations
+dotnet_diagnostic.S1123.severity = none
+
+# CA1041: Provide ObsoleteAttribute message
+dotnet_diagnostic.CA1041.severity = none

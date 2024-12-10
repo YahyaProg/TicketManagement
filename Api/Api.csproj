@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<UserSecretsId>b5282f18-bab5-4681-a647-75f0c33d2007</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Models\Logger\**" />
+		<Compile Remove="StartupHelpers\**" />
+		<Compile Remove="WebControllers\**" />
+		<Content Remove="Models\Logger\**" />
+		<Content Remove="StartupHelpers\**" />
+		<Content Remove="WebControllers\**" />
+		<EmbeddedResource Remove="Models\Logger\**" />
+		<EmbeddedResource Remove="StartupHelpers\**" />
+		<EmbeddedResource Remove="WebControllers\**" />
+		<None Remove="Models\Logger\**" />
+		<None Remove="StartupHelpers\**" />
+		<None Remove="WebControllers\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_WebToolingArtifacts Remove="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EPPlus" Version="7.3.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Wissance.Authorization" Version="1.1.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.csproj" />
+		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="assets\reports\" />
+	  <Folder Include="Models\" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<RollForward>Major</RollForward>
+	</PropertyGroup>
+
+</Project>
